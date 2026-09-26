@@ -1,0 +1,17 @@
+.buut{
+    font-size: large;
+            background: white;
+            color: rgb(16, 18, 87);
+            border-radius: 14px;
+            padding:14px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-shadow: 8px;
+            font-family:'Times New Roman', Times, serif;
+            box-sizing: border-box;
+            
+}

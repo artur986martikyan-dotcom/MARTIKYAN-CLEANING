@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang='hy'>
+
+<head>
+    <link rel="stylesheet" href="clean.css">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>Martikyan Cleaning | Մաքրության ծառայություն</title>
+    <meta name='description' content='Martikyan Cleaning — բնակարանների, տների և տարածքների պրոֆեսիոնալ մաքրություն։'>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            color: #10233f;
+            background: #f8fbff
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1160px;
+            margin: auto;
+            padding: 0 24px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #ffffffee;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e8eef7;
+            z-index: 3
+        }
+
+        .nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            font-size: 25px;
+            font-weight: 800;
+            color: #2269b3
+        }
+
+        .brand small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #6b7c93
+        }
+
+        .links {
+            display: flex;
+            gap: 24px;
+            align-items: center
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2269b3;
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: 14px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px #2269b333
+        }
+
+        .hero {
+            padding: 80px 0 55px;
+            background: radial-gradient(circle at 85% 20%, #dceeff, transparent 35%), linear-gradient(135deg, #fff, #f3f9ff)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 50px;
+            align-items: center
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #e7f3ff;
+            color: #2269b3;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.02;
+            margin: 18px 0
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #53677f;
+            max-width: 620px
+        }
+
+        .hero-card {
+            background: #fff;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 30px 80px #214a7820
+        }
+
+        .hero-card img {
+            width: 100%;
+            border-radius: 20px;
+            display: block
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 24px
+        }
+
+        .stat {
+            background: #fff;
+            border: 1px solid #e5edf6;
+            padding: 18px;
+            border-radius: 16px;
+            text-align: center
+        }
+
+        .stat b {
+            font-size: 22px;
+            color: #2269b3
+        }
+
+        .section {
+            padding: 78px 0
+        }
+
+        .title {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 38px
+        }
+
+        .title h2 {
+            font-size: 38px;
+            margin: 0 0 12px
+        }
+
+        .title p {
+            color: #64758a;
+            line-height: 1.6
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .service {
+            background: #fff;
+            border: 1px solid #e4edf7;
+            border-radius: 22px;
+            padding: 28px;
+            box-shadow: 0 14px 45px #1d4b7810
+        }
+
+        .icon {
+            font-size: 30px
+        }
+
+        .service h3 {
+            margin: 14px 0 8px
+        }
+
+        .service p {
+            color: #687a90;
+            line-height: 1.6
+        }
+
+        .gallery {
+            background: #eef7ff
+        }
+
+        .gallery-card {
+            background: #fff;
+            padding: 14px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px #164f8520
+        }
+
+        .gallery-card img {
+            width: 100%;
+            border-radius: 16px;
+            display: block
+        }
+
+        .cta {
+            margin: 70px auto;
+            background: #173e68;
+            color: white;
+            border-radius: 30px;
+            padding: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin: 0 0 10px
+        }
+
+        .cta p {
+            color: #cfe2f7;
+            margin: 0
+        }
+
+        .cta .btn {
+            background: #fff;
+            color: #173e68;
+            white-space: nowrap
+        }
+
+        footer {
+            padding: 30px 0 45px;
+            color: #728297;
+            text-align: center
+        }
+
+        @media(max-width:800px) {
+            .links a:not(.btn) {
+                display: none
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero h1 {
+                font-size: 42px
+            }
+
+            .services {
+                grid-template-columns: 1fr
+            }
+
+            .stats {
+                grid-template-columns: 1fr
+            }
+
+            .cta {
+                display: block
+            }
+
+            .cta .btn {
+                margin-top: 24px
+            }
+
+            .section {
+                padding: 55px 0
+            }
+        }
+    </style>
+    <link rel="icon" href="ChatGPT Image 21 сент. 2026 г., 19_40_27.png">
+</head>
+
+<body>
+    <header>
+        <div class='wrap nav'>
+            <div class='brand'>Martikyan <span style='font-weight:400'>Cleaning</span><small>CLEAN • FRESH •
+                    COMFORT</small></div>
+            <nav class='links'><a href='#services'>Ծառայություններ</a><a href='#work'>Մեր աշխատանքը</a><a class='btn'
+                    href='tel:+37498156659'>Զանգահարել</a></nav>
+        </div>
+    </header>
+    <main>
+        <section class='hero'>
+            <div class='wrap hero-grid'>
+                <div><span class='tag'>✨ Պրոֆեսիոնալ մաքրություն</span>
+                    <h1>Մաքուր տուն։<br><span style='color:#2269b3'>Ավելի հանգիստ օր։</span></h1>
+                    <p>Martikyan Cleaning-ը օգնում է ձեր տունը և տարածքը դարձնել մաքուր, թարմ և հարմարավետ։ Մանրակրկիտ
+                        աշխատանք՝ տեսանելի արդյունքով։</p>
+                    <div style='display:flex;gap:12px;flex-wrap:wrap;margin-top:28px'><a class='btn'
+                            href='tel:+37498156659'>📞 +374 98 15 66 59</a><a class='btn'
+                            style='background:#fff;color:#2269b3;border:1px solid #cfe2f5;box-shadow:none'
+                            href='#services'>Տեսնել ծառայությունները</a></div>
+                    <div class='stats'>
+                        <div class='stat'><b>Տան</b><br><small>մաքրություն</small></div>
+                        <div class='stat'><b>Խորը</b><br><small>մաքրություն</small></div>
+                        <div class='stat'><b>Խնամքով</b><br><small>յուրաքանչյուր անկյուն</small></div>
+                    </div>
+                </div>
+                <div class='hero-card'><img src='instagram-profile.png' alt='Martikyan Cleaning'></div>
+            </div>
+        </section>
+        <section id='services' class='section'>
+            <div class='wrap'>
+                <div class='title'>
+                    <h2>Մեր ծառայությունները</h2>
+                    <p>Տան և տարբեր տարածքների մաքրություն՝ ըստ ձեր կարիքների։</p>
+                </div>
+                <div class='services'>
+                    <div class='service'>
+                        <div class='icon'>🏠</div>
+                        <h3>Տան և բնակարանի մաքրություն</h3>
+                        <p>Հատակներ, մակերեսներ, խոհանոց, լոգասենյակ և ընդհանուր կարգավորում։</p>
+                    </div>
+                    <div class='service'>
+                        <div class='icon'>🧼</div>
+                        <h3>Խորը մաքրություն</h3>
+                        <p>Մանրակրկիտ մաքրություն դժվար հասանելի հատվածներում և կուտակված կեղտի հեռացում։</p>
+                    </div>
+                    <div class='service'>
+                        <div class='icon'>🚿</div>
+                        <h3>Սանհանգույց և խոհանոց</h3>
+                        <p>Սանտեխնիկայի, սալիկների, ծորակների և աշխատանքային մակերեսների մաքրություն։</p>
+                    </div>
+                    <div class='service'>
+                        <div class='icon'>🪟</div>
+                        <h3>Պատուհանների մաքրություն</h3>
+                        <p>Ապակիների և շրջանակների մաքուր ու խնամված տեսք։</p>
+                    </div>
+                    <div class='service'>
+                        <div class='icon'>🛠️</div>
+                        <h3>Վերանորոգումից հետո</h3>
+                        <p>Փոշու և շինարարական աշխատանքներից մնացած հետքերի մաքրություն։</p>
+                    </div>
+                    <div class='service'>
+                        <div class='icon'>✨</div>
+                        <h3>Անհատական պատվեր</h3>
+                        <p>Կապվեք մեզ հետ, և կընտրենք ձեր տարածքին համապատասխան աշխատանքների ցանկը։</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='work' class='section gallery'>
+            <div class='wrap'>
+                <div class='title'>
+                    <h2>Մեր աշխատանքը</h2>
+                    <p>Իրական կադրեր Martikyan Cleaning-ի աշխատանքներից։</p>
+                </div>
+                <div class='gallery-card'><img src='4ebc5a64-6d11-4d52-b9c2-4aa16766c4d9.png' alt='Martikyan Cleaning աշխատանքներ'></div>
+            </div>
+        </section>
+        <div class='wrap'>
+            <section class='cta'>
+                <div>
+                    <h2>Պատրա՞ստ եք մաքուր տան համար</h2>
+                    <p>Զանգահարեք և քննարկենք ձեր տարածքի մաքրությունը։</p><br>
+                   <a href="https://www.instagram.com/martikyancleaning/">
+                    <button type="button" class="buut">INSTAGRAM</button>
+                </a>
+                </div><a class='btn' href='tel:+37498156659'>Զանգահարել հիմա</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class='wrap'>© 2026 Martikyan Cleaning • Armenia</div>
+    </footer>
+</body>
+
+</html>
